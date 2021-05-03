@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Edite un potin</title>
+    </head>
+    <body>
+        <h1>PAGE POTIN</h1>
+        <h4>
+            Voici la page du potin n°<%= @index %><br/>
+            Edite le, et soumets la mise à jour
+        </h4>
+        <p>
+            Son auteur : <%=@gossip.author%><br/>
+            Le contenu du potin : <%=@gossip.content%>
+        </p>
+        
+        <form action='/gossips/<%=@index%>/edit/' method='POST'>
+            Saisi ici ton nom : <input type='text' name='gossip_author'/><br/>
+            Balance ton potin : <input type='text' name='gossip_content'/><br/>
+            <input type='submit'/>
+        </form>
+
+    </body>
+</html>
+<%# #puts "gossip: #{gossip.author}" if index == 1 %>

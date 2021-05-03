@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Consulte un potin</title>
+    </head>
+    <body>
+        <h1>Consulte un potin !</h1>
+
+    <% gossips.each_with_index do |gossip, index|  %>
+    <% if index == @index %>
+        <p>
+            <%= gossip.author %><br/>
+            <%= gossip.content %>
+        </p>
+    <% end %>
+        <% end %>
+
+
+    </body>
+</html>
+<%# #puts "gossip: #{gossip.author}" if index == 1 %>
